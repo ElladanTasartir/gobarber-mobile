@@ -67,6 +67,7 @@ const SignUp: React.FC = () => {
           const errors = getValidationErrors(err);
 
           formRef.current?.setErrors(errors);
+          return;
         }
         Alert.alert(
           'Erro no cadastro',
