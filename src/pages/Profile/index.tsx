@@ -29,7 +29,7 @@ import {
   UserAvatar,
 } from './styles';
 
-interface SignUpFormData {
+interface ProfileFormData {
   name: string;
   email: string;
   password: string;
@@ -37,7 +37,7 @@ interface SignUpFormData {
   password_confirmation: string;
 }
 
-const SignUp: React.FC = () => {
+const Profile: React.FC = () => {
   const { user, updateUser } = useAuth();
 
   const formRef = useRef<FormHandles>(null);
@@ -49,7 +49,7 @@ const SignUp: React.FC = () => {
   const confirmPasswordInputRef = useRef<TextInput>(null);
 
   const handleUpdateUser = useCallback(
-    async (data: SignUpFormData) => {
+    async (data: ProfileFormData) => {
       try {
         formRef.current?.setErrors({});
 
@@ -234,4 +234,4 @@ const SignUp: React.FC = () => {
   );
 };
 
-export default SignUp;
+export default Profile;
